@@ -1,0 +1,30 @@
+<?php
+		include_once('../includes/connection.php');
+		include_once('../bz/Cities.php');
+		
+		//declare varaibles
+		$message_success = 'Succesfully Saved!';
+		$message_error = 'Error while inserting';
+		$message = $message_error;
+		$success = 0;
+		$errors_occured = 0;
+		
+	
+			if(Cities::UpdateCity($_POST)==1)
+			{
+				$success = 1;
+				$message = $message_success;
+				
+				
+			}			
+		
+		$json_arr = array("success"=> $success,"message"=> $message);
+		print_r(json_encode( $json_arr ));
+		exit;
+	
+		
+		  
+		
+		
+	
+?>

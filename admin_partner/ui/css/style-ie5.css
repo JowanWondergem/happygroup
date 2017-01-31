@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+select.quick_search{width:100px; padding: 4px;}
+
+ul.side_menu li{width:200px; margin:0px; clear:none;}
+
+
+ul.list_footer li{padding:3px 3px 3px 3px; }

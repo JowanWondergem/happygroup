@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.happy-group.eu/</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/contact.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/login.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/index.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/index.php?type=slider</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/index.php?type=map</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/about.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/flyers.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/register_mlm.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/terms.php</loc>
+</url>
+<url>
+  <loc>http://www.happy-group.eu/password_recovery.php</loc>
+</url>
+</urlset>

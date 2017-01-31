@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<map map_file="maps/portugal.swf" tl_long="-31.264178" tl_lat="42.153432" br_long="-6.190805" br_lat="30.02704" zoom="200.1202%" zoom_x="-134.81%" zoom_y="2.65%">
+  <areas>
+  
+  
+    <area mc_name="PT_11" title="Norte"></area>
+    <area mc_name="PT_16" title="Centro"></area>
+    <area mc_name="PT_17" title="Lisboa  e Vale do Tejo"></area>
+    <area mc_name="PT_18" title="Alentejo"></area>
+    <area mc_name="PT_15" title="Algarve"></area>
+   <!-- <area mc_name="PT_20" title="Azores (Açores)"></area>
+    <area mc_name="PT_30" title="Madeira"></area>-->
+    <area mc_name="borders" title="borders" color="#FFFFFF" balloon="false"></area>
+  </areas>
+
+  <movies>
+		<movie title="Lisboa" file="target" color="#F00" height="25" width="25" lat="38.725679" long="-9.150371" fixed_size="true"></movie>
+		<movie title="Albufeira" file="target" color="#F00" height="25" width="25" long="-8.348409" lat="37.1033498253897" fixed_size="true"></movie>
+		<movie title="Porto" file="target" color="#F00" height="25" width="25" long="-8.575594" lat="41.0802500148558" fixed_size="true" url="javascript:alert('assd')"></movie>
+		<movie title="Leiria" file="target" color="#F00" height="25" width="25" long="-8.87121" lat="39.6600322067449" fixed_size="true" url="javascript:alert('assd')"></movie>
+		<movie title="Setúbal" file="target" color="#F00"height="25" width="25" long="-8.833707" lat="38.4151327748272" fixed_size="true" url="javascript:alert('assd')"></movie>
+		<movie title="Fátima" file="target" color="#F00" height="25" width="25" long="-8.616406" lat="39.5260222698781" fixed_size="true" url="javascript:alert('assd')"></movie>
+		
+  </movies>
+
+  <labels>
+    <label x="133" y="153" text_size="18" color="#FFFFFF" remain="false">
+      <text></text>
+    </label>
+  </labels>
+</map>
