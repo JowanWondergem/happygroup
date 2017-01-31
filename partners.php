@@ -42,15 +42,15 @@
 		
 		
 			 if(isset($_GET['area']) && isset($_GET['city']) && isset($_GET['act']))
-			 $Partners = (new Partners)->getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
+			 $Partners = Partners::getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
 			 else if(isset($_GET['area']) && isset($_GET['act']))
-			 $Partners = (new Partners)->getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
+			 $Partners = Partners::getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
 			 else if(!isset($_GET['area']) && !isset($_GET['city']))
-			 $Partners = (new Partners)->getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
+			 $Partners = Partners::getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
 		 	 else if(!isset($_GET['act']) && !isset($_GET['city']))
-			 $Partners = (new Partners)->getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
+			 $Partners = Partners::getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
 			  else if(!isset($_GET['act']) && !isset($_GET['area']) &&  isset($_GET['city']))
-			 $Partners = (new Partners)->getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
+			 $Partners = Partners::getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
 		
 		 
     		 

@@ -1,4 +1,3 @@
-
 <?php include_once('ui/_html.php'); ?>
 <head>
 	<?php 
@@ -46,7 +45,7 @@
     
     <?php 
 	include_once('bz/Cards.php');
-	$Cards = (new Cards)->getAllCards($_SESSION['id_lan']);
+	$Cards = Cards::getAllCards($_SESSION['id_lan']);
 	?>
     <div class="block_100  left " >
         <ul class="">

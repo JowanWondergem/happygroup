@@ -23,7 +23,6 @@
 								') or die('Error get slider'.mysql_error());
 								
 		
-		
 		return  pushResultInArray($query);
 		
 	}

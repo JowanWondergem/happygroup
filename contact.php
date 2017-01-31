@@ -34,7 +34,7 @@
             
             	<?php 
 					include_once('bz/Contact.php');
-					$Contact = (new Contact)->getAllContact();
+					$Contact = Contact::getAllContact();
 				 ?>
             	<?php foreach($Contact as $contact): ?>
                 <div class="block_95 block_contacts rounded-corners bordered">

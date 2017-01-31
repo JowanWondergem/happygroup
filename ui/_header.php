@@ -74,7 +74,7 @@
        <select class="block_100 quick_search search_city">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_city ?></option>
          <?php include_once('bz/Cities.php'); 
-		 	$Cities = (new Cities)->getAllCities($_SESSION['id_lan']);
+		 	$Cities = Cities::getAllCities($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Cities as $city): ?>
@@ -89,7 +89,7 @@
        <select class="block_100 quick_search search_zone">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_zone ?></option>
          <?php include_once('bz/Areas.php'); 
-		 	$Areas = (new Areas)->getAllAreas($_SESSION['id_lan']);
+		 	$Areas = Areas::getAllAreas($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Areas as $area): ?>
@@ -101,7 +101,7 @@
        <select class="block_100 quick_search search_activity">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_activity ?></option>
              <?php include_once('bz/Category.php'); 
-		 	$Categories = (new Category)->getAllCategories($_SESSION['id_lan']);
+		 	$Categories = Category::getAllCategories($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Categories as $category): ?>

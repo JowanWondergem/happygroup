@@ -1,7 +1,7 @@
 
     <?php
     include_once('bz/Slider.php'); 		
-    $SliderImages = (new Slider)->getSliderImages($_SESSION['id_lan']);  
+    $SliderImages = Slider::getSliderImages($_SESSION['id_lan']);  
 	?>
     
 

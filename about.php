@@ -33,7 +33,7 @@
             
              <?php
 					include_once('bz/WebsiteInterface.php'); 		
-					$AboutUs = (new WebsiteInterface)->getAboutUs($_SESSION['id_lan']);  
+					$AboutUs = WebsiteInterface::getAboutUs($_SESSION['id_lan']);  
 					
 			?>
             

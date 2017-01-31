@@ -1,7 +1,7 @@
 
 <?php 
  include_once('bz/Category.php'); ?>
-<?php   $Categories = (new Category)->getAllCategories($_SESSION['id_lan']); ?>
+<?php   $Categories = Category::getAllCategories($_SESSION['id_lan']); ?>
 <div id="dialog-activity" style="display:none;" title="<?php echo $l_popup_activity_title; ?>">
 	
 	<form>

@@ -1,7 +1,7 @@
 <?php
 
 	// Report all PHP errors (see changelog)
-	error_reporting(E_ALL);
+	error_reporting(E_ALL & ~E_STRICT & ~E_DEPRECATED);
 
 	//declare servers
 	$local = array('localhost', '127.0.0.1');

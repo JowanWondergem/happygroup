@@ -34,9 +34,9 @@
     		 
             <?php
 					include_once('bz/Flyers.php'); 
-					$FlyersCities = (new Flyers)->getAllCitiesFlyers($_SESSION['id_lan']);
-					$FlyersAreas  = (new Flyers)->getAllAreasFlyers($_SESSION['id_lan']);
-					$FlyersThemes = (new Flyers)->getAllThemesFlyers($_SESSION['id_lan']);
+					$FlyersCities = Flyers::getAllCitiesFlyers($_SESSION['id_lan']);
+					$FlyersAreas  = Flyers::getAllAreasFlyers($_SESSION['id_lan']);
+					$FlyersThemes = Flyers::getAllThemesFlyers($_SESSION['id_lan']);
 					
 					
 					/*$all = array();
