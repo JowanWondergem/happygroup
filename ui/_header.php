@@ -63,18 +63,18 @@
     <div class="block_70 right">
       <ul class="main_menu right">
      <li><?php echo $l_header_search_by; ?></li>
-      <li>
+      <!-- <li>
       	<a class="main_menu_link" onclick="window.location = 'index.php?type=map'"><?php echo $l_header_search_on_map; ?>
       	
         </a>
-        </li>
+        </li> -->
         
          <li>
       
        <select class="block_100 quick_search search_city">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_city ?></option>
          <?php include_once('bz/Cities.php'); 
-		 	$Cities = Cities::getAllCities($_SESSION['id_lan']);
+		 	$Cities = (new Cities)->getAllCities($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Cities as $city): ?>
@@ -89,7 +89,7 @@
        <select class="block_100 quick_search search_zone">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_zone ?></option>
          <?php include_once('bz/Areas.php'); 
-		 	$Areas = Areas::getAllAreas($_SESSION['id_lan']);
+		 	$Areas = (new Areas)->getAllAreas($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Areas as $area): ?>
@@ -101,7 +101,7 @@
        <select class="block_100 quick_search search_activity">
         	<option value="-1" selected="selected"><?php echo $l_header_search_on_activity ?></option>
              <?php include_once('bz/Category.php'); 
-		 	$Categories = Category::getAllCategories($_SESSION['id_lan']);
+		 	$Categories = (new Category)->getAllCategories($_SESSION['id_lan']);
 			
 		 ?>
          <?php foreach ($Categories as $category): ?>
@@ -116,4 +116,9 @@
       </ul>
     </div>
   </div>
+  <div class="block_100 bg_brown left">    
+  <div class="center happy_main_menu">           
+          <?php include_once('ui/_menu.php'); ?>      
+     </div> <!--end lbock left-->
+</div> <!--end lbock left-->
 </div>

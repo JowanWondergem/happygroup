@@ -72,7 +72,7 @@ p {font-size:12px; font-family:title;}
 .block_start{ min-height:500px;}
 .block_login{ min-height:100px; padding:10px; margin-top:100px;}
 .login_label{  margin:-45px -10px 0px 0px; padding:10px; text-align:center; }
-.block_100{width:100%; clear:both; }
+.block_100{width:100%; clear:both;  box-sizing: border-box;}
 .block_95{width:95%;}
 .block_90{width:90%;}
 .block_85{width:85%;}
@@ -1085,3 +1085,36 @@ background:#FC0;
 }
 
 #instant_dialog{display:none;}
+
+/* styling fixes 2017 */
+.happy_main_menu ul 
+{
+	padding-left: 0px;	
+}
+.happy_main_menu ul li
+{
+	padding: 10px 5px 10px 5px;
+	font-family: logo;
+	display: inline-block;
+}
+.happy_main_menu ul li a
+{
+	font-family: logo !important;
+}
+.quick_search{
+background: white;
+border: 0px;
+}
+.happy_btn{
+	padding:5px;
+	border-radius: 5px;
+    background: #fcf405;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #fcf405 1%, #eacf6e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#fcf405), color-stop(100%,#eacf6e));
+    background: -webkit-linear-gradient(top, #fcf405 1%,#eacf6e 100%);
+    background: -o-linear-gradient(top, #fcf405 1%,#eacf6e 100%);
+    background: -ms-linear-gradient(top, #fcf405 1%,#eacf6e 100%);
+    background: linear-gradient(to bottom, #fcf405 1%,#eacf6e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf405', endColorstr='#eacf6e',GradientType=0 )
+}

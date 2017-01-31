@@ -17,7 +17,7 @@
 	$l_header_login_client = 'login client';
 	$l_header_login_partner = 'login partner';
 	$l_header_login_partner_mlm = 'login Buss Consultant';
-	$l_header_search_by = 'Search by';
+	$l_header_search_by = 'Search Partner';
 	$l_header_search_on_map = 'Map';
 	$l_header_search_on_city = 'City';
 	$l_header_search_on_zone = 'Zone';
@@ -31,7 +31,8 @@
 	//MENU
 	
 	$l_menu_home = 'HOME';
-	$l_menu_search = 'SEARCH';
+	$l_menu_search_pt = 'PARTNERS PORTUGAL';
+	$l_menu_search_de = 'PARTNERS GERMANY';
 	$l_menu_aboutus = 'ABOUT US';
 	$l_menu_register = 'REGISTER';
 	$l_menu_flyers = 'FLYERS';

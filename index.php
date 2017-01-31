@@ -21,16 +21,11 @@
 	
 	<?php include_once('ui/_news_flash.php'); ?>
     
-      
-     
-    <div class="block_15 left">
-           
-          <?php include_once('ui/_menu.php'); ?>
-        
-     </div> <!--end lbock left-->
-  	<div class="block_85 bg_brown left  rounded-corners ">
+       
     
-    	<div  class="block_75 left">
+  	<div class="padded_10 block_100 bg_brown left  rounded-corners ">
+    
+    	<div  class="block_100 left">
     
             <div id="content">
             <?php 
@@ -53,8 +48,8 @@
 	include_once('bz/Cards.php');
 	$Cards = (new Cards)->getAllCards($_SESSION['id_lan']);
 	?>
-    <div class="block_25  right block_start" >
-        <ul class="list_blocks list_cards  v_list">
+    <div class="block_100  left " >
+        <ul class="">
         
         <?php foreach ($Cards as $card) : ?>
         
@@ -93,7 +88,7 @@
 
 <div class=" center "> 
 	<?php if ($_SESSION['id_lan']==2) : ?>
-	<div class="padded_10 block_85 right bg_white rounded-corners  "> 
+	<div class="padded_10 block_100 right bg_white rounded-corners  "> 
     <h1>Obtenha um website pessoal no Happy-Group! </h1>
     <div class="block_60 left">
     
@@ -104,7 +99,7 @@
     
     </div>
     </div>
-    <div class="block_35  right">
+    <div class="block_40  right">
     <h1>Como e Porque?</h1>
     Quando se registe no Happy-Group como parceiro, recebe uma página web para o seu negócio.
     <br />
@@ -138,7 +133,7 @@
      </div>
     <?php endif; ?>
     <?php if ($_SESSION['id_lan']==1) : ?>
-   <div class="padded_10 block_85 right bg_white rounded-corners  "> 
+   <div class="padded_10 block_100 right bg_white rounded-corners  "> 
     <h1>Have your own personal Happy-group website! </h1>
     <div class="block_60 left">
     <div class="flash padded_10">
@@ -150,7 +145,7 @@
    
    
     </div>
-    <div class="block_35  right">
+    <div class="block_40  right">
     <h1>How and Why?</h1>
     Get a personal website when registering as a partner at Happy-Group!
     <br />

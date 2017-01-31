@@ -19,21 +19,21 @@
 
 <div class="center content ">
 	<?php include_once('ui/_news_flash.php'); ?>
-    <div class="block_15 left">
+    <!-- <div class="block_15 left">
            
           <?php include_once('ui/_menu.php'); ?>
         
-     </div> <!--end lbock left-->
-  	<div class="block_85 bg_brown left  rounded-corners ">
+     </div>  --><!--end lbock left-->
+  	<div class="block_100 bg_brown left  rounded-corners ">
     
     
-    	<div  class="block_70 content_info left">
+    	<div  class="block_75 content_info left">
     
             <div id="content ">
             
              <?php
 					include_once('bz/WebsiteInterface.php'); 		
-					$AboutUs = WebsiteInterface::getAboutUs($_SESSION['id_lan']);  
+					$AboutUs = (new WebsiteInterface)->getAboutUs($_SESSION['id_lan']);  
 					
 			?>
             

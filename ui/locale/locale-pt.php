@@ -17,7 +17,7 @@
 	$l_header_login_client = 'login cliente';
 	$l_header_login_partner = 'login parceiro';
 	$l_header_login_partner_mlm = 'login Cons. de Negócio';
-	$l_header_search_by = 'Procurar por';
+	$l_header_search_by = 'Procurar Parceiro';
 	$l_header_search_on_map = 'Mapa';
 	$l_header_search_on_city = 'Cidade';
 	$l_header_search_on_zone = 'Zona';
@@ -30,7 +30,8 @@
 	//MENU
 	
 	$l_menu_home = 'HOME';
-	$l_menu_search = 'PROCURAR';
+	$l_menu_search_pt = 'PARCEIROS PORTUGAL';
+	$l_menu_search_de = 'PARCEIROS ALEMANHA';
 	$l_menu_aboutus = 'SOBRE NÓS';
 	$l_menu_register = 'REGISTRAR';
 	$l_menu_flyers = 'FLYERS';

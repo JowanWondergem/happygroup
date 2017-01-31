@@ -19,12 +19,12 @@
 
 <div class="center content ">
 	<?php include_once('ui/_news_flash.php'); ?>
-    <div class="block_15 left">
+<!--     <div class="block_15 left">
            
           <?php include_once('ui/_menu.php'); ?>
         
-     </div> <!--end lbock left-->
-  	<div class="block_85 bg_brown left  rounded-corners ">
+     </div> <!--end lbock left--> 
+  	<div class="block_100 bg_brown left  rounded-corners ">
     
     
     	<div  class="block_50 content_info left">
@@ -34,7 +34,7 @@
             
             	<?php 
 					include_once('bz/Contact.php');
-					$Contact = Contact::getAllContact();
+					$Contact = (new Contact)->getAllContact();
 				 ?>
             	<?php foreach($Contact as $contact): ?>
                 <div class="block_95 block_contacts rounded-corners bordered">

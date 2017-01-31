@@ -26,12 +26,12 @@
 
 <div class="center content ">
 	<?php include_once('ui/_news_flash.php'); ?>
-    <div class="block_15 left">
+    <!-- <div class="block_15 left">
            
           <?php include_once('ui/_menu.php'); ?>
         
-     </div> <!--end lbock left-->
-  	<div class="block_85 bg_brown left block_content  rounded-corners ">
+     </div>  --><!--end lbock left-->
+  	<div class="block_100 bg_brown left block_content  rounded-corners ">
     
     
     
@@ -42,15 +42,15 @@
 		
 		
 			 if(isset($_GET['area']) && isset($_GET['city']) && isset($_GET['act']))
-			 $Partners = Partners::getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
+			 $Partners = (new Partners)->getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
 			 else if(isset($_GET['area']) && isset($_GET['act']))
-			 $Partners = Partners::getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
+			 $Partners = (new Partners)->getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
 			 else if(!isset($_GET['area']) && !isset($_GET['city']))
-			 $Partners = Partners::getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
+			 $Partners = (new Partners)->getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
 		 	 else if(!isset($_GET['act']) && !isset($_GET['city']))
-			 $Partners = Partners::getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
+			 $Partners = (new Partners)->getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
 			  else if(!isset($_GET['act']) && !isset($_GET['area']) &&  isset($_GET['city']))
-			 $Partners = Partners::getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
+			 $Partners = (new Partners)->getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
 		
 		 
     		 

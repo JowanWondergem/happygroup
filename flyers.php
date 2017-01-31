@@ -22,21 +22,21 @@
 
 <div class="center content ">
 	<?php include_once('ui/_news_flash.php'); ?>
-    <div class="block_15 left">
+    <!-- <div class="block_15 left">
            
           <?php include_once('ui/_menu.php'); ?>
         
-     </div> <!--end lbock left-->
-  	<div class="block_85 bg_brown left  rounded-corners ">
+     </div>  --><!--end lbock left-->
+  	<div class="block_100 bg_brown left  rounded-corners ">
     
     
     	<div  class="block_95 content_info left">
     		 
             <?php
 					include_once('bz/Flyers.php'); 
-					$FlyersCities = Flyers::getAllCitiesFlyers($_SESSION['id_lan']);
-					$FlyersAreas  = Flyers::getAllAreasFlyers($_SESSION['id_lan']);
-					$FlyersThemes = Flyers::getAllThemesFlyers($_SESSION['id_lan']);
+					$FlyersCities = (new Flyers)->getAllCitiesFlyers($_SESSION['id_lan']);
+					$FlyersAreas  = (new Flyers)->getAllAreasFlyers($_SESSION['id_lan']);
+					$FlyersThemes = (new Flyers)->getAllThemesFlyers($_SESSION['id_lan']);
 					
 					
 					/*$all = array();

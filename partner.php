@@ -4,23 +4,23 @@ include_once('rewrite.php');
 //get inteface texts
 			
 include_once('bz/WebsiteInterface.php'); 
-$WebsitePartnerTexts = WebsiteInterface::getWebsitePartnerTexts($_SESSION['id_lan']);
+$WebsitePartnerTexts = (new WebsiteInterface)->getWebsitePartnerTexts($_SESSION['id_lan']);
 
 //get partner images
 include_once('bz/WebsitePartners.php'); 
-$WebsitePartnerImages = WebsitePartners::getWebsitePartnerImages($id_partner);
+$WebsitePartnerImages = (new WebsitePartners)->getWebsitePartnerImages($id_partner);
 //print_r($WebsitePartnerImages);
 //get partner texts
 
-$WebsitePartnerInfo = WebsitePartners::getWebsitePartnerInfo($_SESSION['id_lan'], $id_partner); 
+$WebsitePartnerInfo = (new WebsitePartners)->getWebsitePartnerInfo($_SESSION['id_lan'], $id_partner); 
 //print_r($WebsitePartnerInfo);
 
 //get partner discounts
-$WebsitePartnerDiscounts = WebsitePartners::getWebsitePartnerDiscounts($_SESSION['id_lan'], $id_partner);
+$WebsitePartnerDiscounts = (new WebsitePartners)->getWebsitePartnerDiscounts($_SESSION['id_lan'], $id_partner);
 //print_r($WebsitePartnerDiscounts);
 
 //get partner layout
-$WebsitePartnerLayout = WebsitePartners::getWebsitePartnerLayout($_SESSION['id_lan'], $id_partner);
+$WebsitePartnerLayout = (new WebsitePartners)->getWebsitePartnerLayout($_SESSION['id_lan'], $id_partner);
 //print_r($WebsitePartnerLayout);
 	?>
      
@@ -120,7 +120,7 @@ $WebsitePartnerLayout = WebsitePartners::getWebsitePartnerLayout($_SESSION['id_l
 <div class="block_header "  >
 <?php 
 		 $i = 0;
-		 $WebsitesPartners = WebsitePartners::getAllPartnerWebsites();
+		 $WebsitesPartners = (new WebsitePartners)->getAllPartnerWebsites();
 		
 		  $sites = "[";
 		 foreach($WebsitesPartners as $webs)
@@ -186,10 +186,10 @@ $WebsitePartnerLayout = WebsitePartners::getWebsitePartnerLayout($_SESSION['id_l
       <div class="block_100 bg_white left row-fluid  rounded-corners  ">
         <?php 
             if(count($WebsitePartnerLayout)!=0){
-            $page1 =  WebsitePartners::checkLayoutPosition($WebsitePartnerLayout['top_left']);
+            $page1 =  (new WebsitePartners)->checkLayoutPosition($WebsitePartnerLayout['top_left']);
             $pos = 'left';
             include_once($page1);
-            $page2 = WebsitePartners::checkLayoutPosition($WebsitePartnerLayout['top_right']);
+            $page2 = (new WebsitePartners)->checkLayoutPosition($WebsitePartnerLayout['top_right']);
             $pos = 'right';
             include_once($page2);
             }
@@ -217,10 +217,10 @@ $WebsitePartnerLayout = WebsitePartners::getWebsitePartnerLayout($_SESSION['id_l
                 <div id="tabs-1" class="block_100 tab-pane  active  left ">
                 <?php 
                     if(count($WebsitePartnerLayout)!=0){
-                    $page3 =  WebsitePartners::checkLayoutPosition($WebsitePartnerLayout['bottom_left']);
+                    $page3 =  (new WebsitePartners)->checkLayoutPosition($WebsitePartnerLayout['bottom_left']);
                     $pos = 'left';
                     include_once($page3);
-                    $page4 = WebsitePartners::checkLayoutPosition($WebsitePartnerLayout['bottom_right']);
+                    $page4 = (new WebsitePartners)->checkLayoutPosition($WebsitePartnerLayout['bottom_right']);
                     $pos = 'right';
                     include_once($page4);
                     }
