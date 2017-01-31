@@ -90,7 +90,7 @@
 	
 	
 	
-	function UpdateAboutUs($_POST)
+	function UpdateAboutUs()
 	{
 		$query = mysql_query(
 		'UPDATE interface_lan SET 	
@@ -104,7 +104,7 @@
 			return	0;
 	}
 	
-	function InsertAboutUs($_POST)
+	function InsertAboutUs()
 	{
 		$query = mysql_query('INSERT INTO interface_lan(id_lan,id_interface,text) VALUES("'.mysql_prep($_POST['id_lan']).'",
 							3,"'.mysql_prep($_POST['text']).'")'

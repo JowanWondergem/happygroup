@@ -9,9 +9,11 @@
 <body onLoad="<?php  // if(isset($_GET['type']) && $_GET['type']=='map') echo 'ammap.focus()'; ?>">
 
 
-	<?php 
-	include_once('ui/popups/_popup_activity.php');  ?>
-	<?php include_once('ui/_header.php'); ?>
+<?php 
+    include_once('ui/popups/_popup_activity.php');
+    include_once('ui/_header.php'); 
+?>
+
 
 <div class="h_spacer "> <img src="ui/images/img03.png" /> </div>
 
@@ -49,7 +51,7 @@
     
     <?php 
 	include_once('bz/Cards.php');
-	$Cards = Cards::getAllCards($_SESSION['id_lan']);
+	$Cards = (new Cards)->getAllCards($_SESSION['id_lan']);
 	?>
     <div class="block_25  right block_start" >
         <ul class="list_blocks list_cards  v_list">

@@ -1,5 +1,8 @@
 <?php
 
+	// Report all PHP errors (see changelog)
+	error_reporting(E_ALL);
+
 	//declare servers
 	$local = array('localhost', '127.0.0.1');
 	$test = array('91.121.221.156');

@@ -41,7 +41,7 @@
 	}
 	
 	
-	function checkTheme($_POST)
+	function checkTheme()
 	{
 		$query = mysql_query('SELECT id FROM themes WHERE theme = "'.mysql_prep($_POST['theme']).'"');
 	
@@ -51,7 +51,7 @@
 			return	-1;
 	}
 	
-	function checkThemeLanguage($_POST)
+	function checkThemeLanguage()
 	{
 		$query = mysql_query('SELECT id FROM themes_lan WHERE id_theme = "'.mysql_prep($_POST['id_theme']).'" AND id_lan = "'.mysql_prep($_POST['id_lan']).'"');
 	
@@ -62,7 +62,7 @@
 	}
 	
 	
-	function updateTheme($_POST)
+	function updateTheme()
 	{
 		$query = mysql_query('UPDATE themes SET theme = "'.mysql_prep($_POST['theme']).'"
 							WHERE id = "'.$_POST['id_theme'].'"
@@ -75,7 +75,7 @@
 	}
 	
 	
-	function insertTheme($_POST)
+	function insertTheme()
 	{
 		$query = mysql_query('INSERT INTO themes (theme) VALUES ("'.mysql_prep($_POST['theme']).'")') or die('Error insert themes info'.mysql_error());
 	
@@ -85,7 +85,7 @@
 			return	0;
 	}
 	
-	function insertThemeLanguage($_POST)
+	function insertThemeLanguage()
 	{
 		$query = mysql_query('INSERT INTO themes_lan (id_lan,id_theme,theme) VALUES ("'.mysql_prep($_POST['id_lan']).'","'.mysql_prep($_POST['id_theme']).'","'.mysql_prep($_POST['theme']).'")') or die('Error insert themes info'.mysql_error());
 	
@@ -96,7 +96,7 @@
 	}
 	
 	
-	function updateThemeLanguage($_POST)
+	function updateThemeLanguage()
 	{
 		$query = mysql_query('UPDATE themes_lan SET 
 							id_lan = "'.mysql_prep($_POST['id_lan']).'"

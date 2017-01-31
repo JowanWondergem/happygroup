@@ -26,8 +26,7 @@
 								FROM `cards` AS c
 								LEFT JOIN cards_lan AS cl ON c.id = cl.id_card AND cl.id_lan ='.$lan.'
 								WHERE  c.active = 1
-								ORDER BY id DESC
-								
+								ORDER BY id DESC								
 								
 								') or die('Error get partners'.mysql_error());
 								
@@ -39,7 +38,7 @@
 	
 	
 	
-	function InsertCardInfo($_POST)
+	function InsertCardInfo()
 	{
 		$query = mysql_query('INSERT INTO cards (active,price) 
 							  VALUES ("'.mysql_prep($_POST['active']).'","'.mysql_prep($_POST['price']).'")') or die('Error insert card info'.mysql_error());
@@ -83,7 +82,7 @@
 		return  pushResultInSimpleArray($query);	
 	}
 	
-	function UpdateCardDescription($_POST)
+	function UpdateCardDescription()
 	{
 		$query = mysql_query(
 		'UPDATE cards_lan SET 	
@@ -100,7 +99,7 @@
 			return	0;
 	}
 	
-	function InsertCardDescription($_POST)
+	function InsertCardDescription()
 	{
 		$query = mysql_query('INSERT INTO cards_lan (id_card,id_lan,name, subtitle, duration, description) VALUES("'.mysql_prep($_POST['id_card']).'",
 							"'.mysql_prep($_POST['id_lan']).'","'.mysql_prep($_POST['name']).'","'.mysql_prep($_POST['subtitle']).'","'.mysql_prep($_POST['duration']).'"
@@ -113,7 +112,7 @@
 			return	0;
 	}
 	
-		function UpdateCardInfo($_POST)
+		function UpdateCardInfo()
 	{
 		$query = mysql_query(
 		'UPDATE cards SET 	active = "'.mysql_prep($_POST['active']).'",

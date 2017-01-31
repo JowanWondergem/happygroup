@@ -39,7 +39,7 @@
 	
 	
 	
-	function InsertContractsInfo($_POST)
+	function InsertContractsInfo()
 	{
 		$query = mysql_query('INSERT INTO mlm_contracts (active,price) 
 							  VALUES ("'.mysql_prep($_POST['active']).'","'.mysql_prep($_POST['price']).'")') or die('Error insert mlm_contracts info'.mysql_error());
@@ -81,7 +81,7 @@
 		return  pushResultInSimpleArray($query);	
 	}
 	
-	function UpdateCardDescription($_POST)
+	function UpdateCardDescription()
 	{
 		$query = mysql_query(
 		'UPDATE mlm_contracts_lan SET 	
@@ -96,7 +96,7 @@
 			return	0;
 	}
 	
-	function InsertContractDescription($_POST)
+	function InsertContractDescription()
 	{
 		$query = mysql_query('INSERT INTO mlm_contracts_lan (id_mlm_contract,id_lan,name, info) VALUES("'.mysql_prep($_POST['id_mlm_contract']).'",
 							"'.mysql_prep($_POST['id_lan']).'","'.mysql_prep($_POST['name']).'","'.mysql_prep($_POST['info']).'"")'
@@ -108,7 +108,7 @@
 			return	0;
 	}
 	
-		function UpdateContractInfo($_POST)
+		function UpdateContractInfo()
 	{
 		$query = mysql_query(
 		'UPDATE mlm_contracts SET 	active = "'.mysql_prep($_POST['active']).'",

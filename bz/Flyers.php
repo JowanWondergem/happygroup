@@ -104,7 +104,7 @@
 	}
 	
 	
-	function insertFlyerInfo($_POST)
+	function insertFlyerInfo()
 	{
 		$query = mysql_query('INSERT INTO flyers (active,id_lan, id_admin, id_city, id_area, id_theme) 
 							  VALUES ("'.mysql_prep($_POST['active']).'","'.mysql_prep($_POST['id_lan']).'","'.mysql_prep($_POST['id_admin']).'",
@@ -117,7 +117,7 @@
 	}
 	
 	
-	function updateFlyerInfo($_POST)
+	function updateFlyerInfo()
 	{
 		$query = mysql_query('UPDATE flyers SET active = "'.mysql_prep($_POST['active']).'"
 							,id_lan = "'.mysql_prep($_POST['id_lan']).'"
