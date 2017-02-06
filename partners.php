@@ -41,21 +41,25 @@
 		 include_once('bz/Partners.php'); 
 		
 		
-			 if(isset($_GET['area']) && isset($_GET['city']) && isset($_GET['act']))
-			 $Partners = Partners::getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
-			 else if(isset($_GET['area']) && isset($_GET['act']))
-			 $Partners = Partners::getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
-			 else if(!isset($_GET['area']) && !isset($_GET['city']))
-			 $Partners = Partners::getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
-		 	 else if(!isset($_GET['act']) && !isset($_GET['city']))
-			 $Partners = Partners::getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
-			  else if(!isset($_GET['act']) && !isset($_GET['area']) &&  isset($_GET['city']))
-			 $Partners = Partners::getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
-		
-		 
-    		 
-		
-		 
+			 
+	 			 if(isset($_GET['area']) && isset($_GET['city']) && isset($_GET['act']))
+			 		$Partners = Partners::getPartnersActivityofCity($_SESSION['id_lan'], $_GET['country'], $_GET['area'],$_GET['city'], $_GET['act']); 
+	 			else if(isset($_GET['area']) && isset($_GET['act']))
+			 		$Partners = Partners::getPartnersActivityofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area'], $_GET['act']); 
+			 	else if(!isset($_GET['area']) && !isset($_GET['city']) && isset($_GET['act']))
+				 	$Partners = Partners::getPartnersofCategory($_SESSION['id_lan'], $_GET['country'], $_GET['act']);
+			 	 
+			 	else if(!isset($_GET['act']) && !isset($_GET['city']) && isset($_GET['area']))
+				 	$Partners = Partners::getPartnersofArea($_SESSION['id_lan'], $_GET['country'], $_GET['area']);
+				 
+				else if(!isset($_GET['act']) && !isset($_GET['area']) &&  isset($_GET['city']))
+				 	$Partners = Partners::getPartnersofCity($_SESSION['id_lan'], $_GET['country'], $_GET['city']);
+				 
+				else if(isset($_GET['country']))
+				 	$Partners = Partners::getPartnersOfCountry($_SESSION['id_lan'], $_GET['country']);
+				else 
+			 		$Partners = Partners::getPartnersOfCountry($_SESSION['id_lan'], 172);
+
 			
 		
 		 

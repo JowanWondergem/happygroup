@@ -132,6 +132,26 @@
 		return  pushResultInArray($query);
 		
 	}
+
+	//get all partners in specific country
+	function getPartnersOfCountry($lan = 2, $country=172){
+
+		$query = mysql_query('	
+								SELECT p . * , pl.description_happy, pl.description_discount, cl.country, al.area, cal.category, cil.city
+								FROM `partners` AS p
+								LEFT JOIN partners_lan AS pl ON p.id = pl.id_partner AND pl.id_lan = '.$lan.'
+								LEFT JOIN countries_lan AS cl ON p.id_country = cl.id_country AND cl.id_lan ='.$lan.'
+								LEFT JOIN areas_lan AS al ON p.id_area = al.id_area AND al.id_lan ='.$lan.'
+								LEFT JOIN cities_lan AS cil ON p.id_city = cil.id_city AND cil.id_lan ='.$lan.'
+								LEFT JOIN categories_lan AS cal ON p.id_category = cal.id_category AND cal.id_lan ='.$lan.'
+								WHERE p.active =1
+								AND p.id_country = '.$country.'
+								
+								') or die('Error get partners'.mysql_error());
+									
+		return  pushResultInArray($query);
+
+	}
 	
 	function getPartnersofCategory($lan = 2, $country=172, $cat) 
 	{ 
