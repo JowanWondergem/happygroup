@@ -28,7 +28,7 @@
 	// if localhost
 	else
 	{
-		define("DB_SERVER", "localhost:8888");
+		define("DB_SERVER", "127.0.0.1");
 		define("DB_USER", "root"); 
 		define("DB_PASS", "root"); 
 		define("DB_NAME", "happygroup_db");
