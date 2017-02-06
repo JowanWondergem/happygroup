@@ -216,6 +216,15 @@
 	$l_email_message_not_in_database ='Email is not is database!';
 	$l_email_message_not_sent ='Email is not sent!';
 	
-	
+	//QUICK FIXES
+	$l_card_duration = 'Duration';
+	$l_home_german_partners = 'Now also partners in Stuttgart, Germany!';
+	$l_home_german_link_text = 'See german partners';
+	$l_home_join_us = 'Would you like be part of the happy group, spreading a smile. Feel free to contact us';
+	$l_home_phone = '+351 931 353 804';
+	$l_home_email = 'happygroup1999@gmail.com';
+	$l_conversion_catcher = 'Direct contact: ';
+	$l_join_us_title = 'Check out all of our cards types!';
+	$l_join_us_description = 'Contact us by phone or email, so we can deliver the card to you';
 	
 	?>

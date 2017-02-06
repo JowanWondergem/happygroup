@@ -17,7 +17,7 @@
 	$l_header_login_client = 'login cliente';
 	$l_header_login_partner = 'login parceiro';
 	$l_header_login_partner_mlm = 'login Cons. de Negócio';
-	$l_header_search_by = 'Procurar Parceiro';
+	$l_header_search_by = 'Encontre já o seu parceiro';
 	$l_header_search_on_map = 'Mapa';
 	$l_header_search_on_city = 'Cidade';
 	$l_header_search_on_zone = 'Zona';
@@ -225,5 +225,14 @@
 	$l_email_message_not_in_database ='Email não existe na nossa base de dados!';
 	$l_email_message_not_sent ='Email não foi enviado!';
 	
-	
+	//QUICK FIXES
+	$l_card_duration = 'Validade';
+	$l_home_german_partners = 'Agora também com parceiros na Alemanha em Stuttgart!';
+	$l_home_german_link_text = 'Ver parceiros alemães';
+	$l_home_join_us = 'Queira fazer parte do grupo happy! A espalhar o sorriso, contacte-nos';
+	$l_home_phone = '+351 931 353 804';
+	$l_home_email = 'happygroup1999@gmail.com';
+	$l_conversion_catcher = 'Contacto directo: ';
+	$l_join_us_title = 'Adira já o seu cartão de diversão';
+	$l_join_us_description = 'Contacte-nos por email ou telephone para aderir';
 	?>

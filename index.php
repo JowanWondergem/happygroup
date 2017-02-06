@@ -24,7 +24,7 @@
     
   	<div class="padded_10 block_100 bg_brown left  rounded-corners ">
     
-    	<div  class="block_100 left">
+    	<div  class="block_75 left">
     
             <div id="content">
             <?php 
@@ -42,36 +42,40 @@
             </div>
        
     	</div>
-    
+
+        <div class="block_20 right">
+            <div class="block_100 bg_gr_yellow home_news">
+                <p><?php echo $l_home_german_partners; ?></p>
+                <a class="happy_link_white" href="partners.php?country=80"><?php echo $l_home_german_link_text; ?> ></a>
+            </div>
+            <div class="block_100 bg_gr_yellow home_news">
+                <p><?php echo $l_home_join_us; ?></p>
+                <p><a class="happy_link_white" href="tel:<?php echo str_replace(' ', '', $l_home_phone); ?>"><?php echo $l_home_phone; ?></a></p>          
+                <p><a class="happy_link_white" href="mailto:<?php echo $l_home_email; ?>"><?php echo $l_home_email; ?></a></p>
+            </div>
+        </div>
+         <div class="block_100">
+            <h1 class="padded-title"><?php echo $l_join_us_title; ?></h1>
+            <h2 class="padded-title"><?php echo $l_join_us_description; ?></h2>
+            </div>
     <?php 
 	include_once('bz/Cards.php');
 	$Cards = Cards::getAllCards($_SESSION['id_lan']);
 	?>
     <div class="block_100  left " >
-        <ul class="">
+        <ul class="list_cards">
         
         <?php foreach ($Cards as $card) : ?>
         
-            <li class="bg_gr_white" ><a  href="">
+            <li class="" >
+            <a  href="">
             	<img src="media/cards/<?php echo $card['image_home']; ?>" />
             	<h3><?php echo $card['name']; ?></h3>
-                <p><?php echo $card['subtitle']; ?></p></a>
-            </li>
-            
-            <!-- location.href='<?php echo $domain_linkage; ?>/register.php?lang=<?php echo $_SESSION['lang']; ?>&card_type=<?php echo $card['id']; ?>'
-            -->
-             <div class="popup_small bg_gr_yellow rounded-corners"  onClick="javascript:popupMessage('Em breve pode obter o cartão através do a nossa página, para já entre em contato connosco directamente!</br></br><i> Soon you have to possibility to order the cards directly online, for now contact us directly</i> by phone +351 931 353 804 or mail happygroup1999@gmail.com ') ">
-                <ul>
-                    <li >
-                        <span class="card_type"><?php echo $card['name']; ?></span>
-                        <span class="card_time">(<?php echo $card['duration']; ?>)</span>
-                          
-                        <span class="card_des"> <?php echo limitText($card['description'],80); ?></span>    
-                        <span class="card_price">&euro; <?php echo $card['price']; ?></span>  
-                    </li>
-                </ul>
-            </div>
-            
+                <p class="card_des"> <?php echo limitText($card['description'],80); ?></p>  
+                <i class="card_time"> <?php echo $l_card_duration ?> : <?php echo $card['duration']; ?></i>
+                <p class="bg_gr_yellow card_price">&euro; <?php echo $card['price']; ?></p>  
+            </a>
+            </li>          
          <?php endforeach; ?>
         </ul>
     </div>

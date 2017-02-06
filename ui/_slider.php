@@ -1,10 +1,8 @@
 
     <?php
     include_once('bz/Slider.php'); 		
-    $SliderImages = Slider::getSliderImages($_SESSION['id_lan']);  
+    $SliderImages = Slider::getSliderImages($_SESSION['id_lan']); 
 	?>
-    
-
     
  	<div class = 'doubleSlider-1'>	
         <div class = 'slider'>   
@@ -19,22 +17,6 @@
             <?php endforeach; ?>
         </div>  
     </div>
+
 		
-		<!--<div class = 'doubleSliderPrevButton'></div>-->
 		
-		<div class = 'doubleSlider-2'>
-			
-			<div class = 'slider'>
-				
-                <?php foreach ($SliderImages as $slider): ?>            
-        <div class = 'button' id = 'item<?php echo $slider['id']; ?>'><img class="rounded-corners" src="includes/resize.php?h=60&w=96&image=../media/slider/<?php echo $slider['image']; ?>" />
-           <div class = 'border'></div>
-        </div>
-        <?php endforeach; ?>
-				
-			
-			</div>
-		
-		</div>
-		
-		<!--<div class = 'doubleSliderNextButton'></div>-->

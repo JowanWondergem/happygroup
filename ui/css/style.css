@@ -1118,3 +1118,78 @@ border: 0px;
     background: linear-gradient(to bottom, #fcf405 1%,#eacf6e 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf405', endColorstr='#eacf6e',GradientType=0 )
 }
+
+.block_reference{
+	background: white !important;
+}
+
+ul.list_cards{
+	overflow-y: auto;
+	margin-left: -35px;
+}
+.list_cards li a:hover{
+	text-decoration: none;
+	
+}
+
+.list_cards li{
+	box-sizing: border-box;
+	margin: 10px;
+	padding: 10px;
+	width: 22%;
+	float: left;
+	min-height: 320px;
+	border-radius: 5px;
+	background:rgba(228, 228, 228, 0.24);
+}
+.list_cards li img{
+	width: 100%;
+	
+}
+
+.list_cards li h3{
+	font-family: logo;
+	font-size: 15px;
+	padding: 0px;
+	padding-top: 10px;
+	text-transform: uppercase;
+	
+}
+.list_cards li a .card_price{
+	font-size: 20px;
+	font-family: logo;
+	text-align: center;
+	padding: 10px 0px;
+	border-radius: 5px;
+}
+.padded-title{
+	padding-left: 10px;
+}
+
+.home_news{
+	margin-top: 10px;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+.happy_link_white{
+clear: both;
+    font-size: 12px;
+    padding: 3px 3px 3px 10px;
+    background: #FFF;
+    margin: 5px 0px 0px 0px;
+    border-radius: 5px;
+
+}
+.contact-block-shower
+{
+	position: fixed;
+	bottom: 10px;
+	right: -10px;
+	z-index: 9999;
+	background: white;
+	padding:10px 20px 10px 10px;
+	border-radius: 10px;
+	border: 1px solid #999;
+
+}
+

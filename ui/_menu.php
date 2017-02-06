@@ -12,3 +12,11 @@
       
   </ul>
    <!-- <img class="map_small"  src="ui/images/map_search.png" onclick="window.location = 'index.php?type=map'"/> -->
+
+
+
+   <div class="contact-block-shower right">
+   <p><?php echo $l_conversion_catcher; ?></p>
+   <p><a class="happy_link_white" href="tel:<?php echo str_replace(' ', '', $l_home_phone); ?>"><?php echo $l_home_phone; ?></a></p>          
+   <p><a class="happy_link_white" href="mailto:<?php echo $l_home_email; ?>"><?php echo $l_home_email; ?></a></p>
+   </div>
