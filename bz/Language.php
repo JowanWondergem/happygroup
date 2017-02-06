@@ -33,13 +33,13 @@
 	}	
 	
 	
-	function checkLanguageCode($_POST)
+	function checkLanguageCode()
 	{
 		$query = mysql_query('SELECT code FROM languages WHERE code = "'.mysql_prep($_POST['code']).'"');
 		return(mysql_num_rows($query));
 	}
 	
-	function InsertLanguage($_POST)
+	function InsertLanguage()
 	{
 		
 		$query = mysql_query('INSERT INTO languages (code, text) 
@@ -53,7 +53,7 @@
 		
 	}
 	
-	function UpdateLanguage($_POST)
+	function UpdateLanguage()
 	{
 		$query = mysql_query(
 		'UPDATE languages SET 	

@@ -69,7 +69,7 @@
 	}
 	
 	
-	function InsertCity($_POST)
+	function InsertCity()
 	{
 		$query = mysql_query('INSERT INTO cities (id_country, id_area, code, text) 
 							  VALUES ("'.mysql_prep($_POST['id_country']).'",
@@ -84,7 +84,7 @@
 	}
 	
 	
-	function UpdateCity($_POST)
+	function UpdateCity()
 	{
 		$query = mysql_query('UPDATE cities SET id_country = "'.mysql_prep($_POST['id_country']).'",
 												id_area = "'.mysql_prep($_POST['id_area']).'",
@@ -123,7 +123,7 @@
 		return  pushResultInSimpleArray($query);		
 	}	
 	
-	function insertCityTranslation($POST)
+	function insertCityTranslation()
 	{
 		$query = mysql_query('INSERT INTO cities_lan (id_lan, id_city, city) 
 							  VALUES ("'.mysql_prep($_POST['id_lan']).'",
@@ -137,7 +137,7 @@
 		
 	}
 	
-	function UpdateCityTranslation($_POST)
+	function UpdateCityTranslation()
 	{
 		$query = mysql_query('UPDATE cities_lan SET city = "'.mysql_prep($_POST['city']).'" WHERE id = "'.mysql_prep($_POST['id_city']).'"') or die('Error edting city trans info'.mysql_error());
 	

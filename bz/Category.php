@@ -29,7 +29,7 @@
 			return  pushResultInSimpleArray($query);
   	}
 	
-	function insertCategory($_POST)
+	function insertCategory()
 	{
 			$query = mysql_query('INSERT INTO categories (text)  VALUES ("'.mysql_prep($_POST['text']).'")') or die(mysql_error());
 			if($query)
@@ -38,7 +38,7 @@
 			return	0;
   	}
 	
-	function updateCategory($_POST)
+	function updateCategory()
 	{
 			$query = mysql_query('UPDATE categories SET text = "'.mysql_prep($_POST['text']).'" WHERE id = "'.mysql_prep($_POST['id']).'"') or die(mysql_error());
 			if($query)
@@ -47,7 +47,7 @@
 			return	0;
   	}
 	
-	function insertCategoryLan($_POST)
+	function insertCategoryLan()
 	{
 			$query = mysql_query('INSERT INTO categories_lan (id_lan, id_category, category )  VALUES ("'.mysql_prep($_POST['id_lan']).'",
 			"'.mysql_prep($_POST['id']).'","'.mysql_prep($_POST['text']).'")') or die(mysql_error());
@@ -58,7 +58,7 @@
   	}
 	
 	
-	function updateCategoryLan($_POST)
+	function updateCategoryLan()
 	{
 			$query = mysql_query('UPDATE categories_lan SET category = "'.mysql_prep($_POST['text']).'" WHERE id_category = "'.mysql_prep($_POST['id']).'" AND id_lan = "'.mysql_prep($_POST['id_lan']).'"') or die(mysql_error());
 			if($query)

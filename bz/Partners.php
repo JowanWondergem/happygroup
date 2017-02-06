@@ -245,7 +245,7 @@
 	}
 	
 	
-	function UpdatePartnerInfo($_POST)
+	function UpdatePartnerInfo()
 	{
 		
 		$query = mysql_query(
@@ -280,7 +280,7 @@
 	}
 	
 	
-	function UpdatePartnerWebsiteInfo($_POST)
+	function UpdatePartnerWebsiteInfo()
 	{
 		
 		$query = mysql_query(
@@ -306,7 +306,7 @@
 			return	0;
 	}
 	
-	function UpdatePartnerCategory($_POST)
+	function UpdatePartnerCategory()
 	{
 		$query = mysql_query(
 		'UPDATE partners SET 	
@@ -320,7 +320,7 @@
 			return	0;
 	}
 	
-	function UpdatePartnerDescription($_POST)
+	function UpdatePartnerDescription()
 	{
 		$query = mysql_query(
 		'UPDATE partners_lan SET 	
@@ -336,7 +336,7 @@
 	}
 	
 	
-	function InsertPartnerDescription($_POST)
+	function InsertPartnerDescription()
 	{
 		$query = mysql_query('INSERT INTO partners_lan(id_lan,id_partner,description_happy,description_discount) VALUES("'.mysql_prep($_POST['id_lan']).'",
 							"'.mysql_prep($_POST['id_partner']).'","'.mysql_prep($_POST['description_happy']).'","'.mysql_prep($_POST['description_discount']).'")'
@@ -348,7 +348,7 @@
 			return	0;
 	}
 	
-	function InsertPartnerInfo($_POST)
+	function InsertPartnerInfo()
 	{
 		$query = mysql_query('INSERT INTO partners (active,has_happy_website, id_admin, id_category, id_country, 
 									id_area, id_city, name, url_website, url_website_private, address, zip_code, email, phone, mobile_phone,fax, owner, tax_number, bank_account, date_creation,
@@ -368,7 +368,7 @@
 	}
 	
 	
-	function DeletePartner($_POST)
+	function DeletePartner()
 	{
 		$query = mysql_query("DELETE FROM partners WHERE id=".$_POST['id_partner']."") or die(mysql_error());	
 		$query2 = mysql_query("DELETE FROM partners_images WHERE id_partner=".$_POST['id_partner']."") or die(mysql_error());	
@@ -380,7 +380,7 @@
 	
 	
 	
-	function checkWebsite($_POST)
+	function checkWebsite()
 	{
 		if(mysql_prep($_POST['url_website'])!='')
 		{
@@ -429,7 +429,7 @@
 
 
  
- function checkLogin($_POST)
+ function checkLogin()
 	{
 		$query = mysql_query("SELECT * FROM `partners` WHERE email = '".$_POST['email']."' AND password = '".mysql_prep(EncryptPass($_POST['password']))."' AND active = 1 LIMIT 1") or		 die('Error check login'.mysql_error());		
 		

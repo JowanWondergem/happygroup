@@ -20,7 +20,7 @@
 	
 	
 	
-	function InsertAdminInfo($_POST)
+	function InsertAdminInfo()
 	{
 		$query = mysql_query('INSERT INTO admins (active,id_country, id_admin_registrator, first_name, last_name, address, email_private, email_company, phone, mobile_phone, password, date_creation) 
 							  VALUES ("'.mysql_prep($_POST['active']).'","'.mysql_prep($_POST['id_country']).'","'.mysql_prep($_POST['id_admin_registrator']).'",
@@ -34,7 +34,7 @@
 	}
 	
 	
-	function UpdateAdminInfo($_POST)
+	function UpdateAdminInfo()
 	{
 		$query = mysql_query(
 		'UPDATE admins SET 	
@@ -58,7 +58,7 @@
 	
 	
 	
-	function checkEmailCompany($_POST)
+	function checkEmailCompany()
 	{
 		$query = mysql_query('SELECT id FROM admins WHERE email_company = "'.mysql_prep($_POST['email_company']).'"');
 	
@@ -69,7 +69,7 @@
 	}
 	
 	
-	function checkLogin($_POST)
+	function checkLogin()
 	{
 		$query = mysql_query("SELECT * FROM `admins` WHERE email_company = '".$_POST['username']."' AND password = '".mysql_prep(EncryptPass($_POST['password']))."' AND active = 1 LIMIT 1") or		 die('Error check login'.mysql_error());		
 		
@@ -79,7 +79,7 @@
 			return	-1;
 	}
 	
-	function checkAdminPassword($_POST)
+	function checkAdminPassword()
 	{
 		$query = mysql_query("SELECT * FROM `admins` WHERE password = '".EncryptPass($_POST['password_old'])."' AND id = ".$_POST['id']."") or		 die('Error check login'.mysql_error());		
 		
@@ -117,7 +117,7 @@
 	
 	
 	
-	function DeleteAdmin($_POST)
+	function DeleteAdmin()
 	{
 		$query = mysql_query("DELETE FROM admins WHERE id=".$_POST['id']) or die(mysql_error());	
 		$dir = '../media/admins/'.$_POST['id'].'/';

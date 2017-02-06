@@ -298,7 +298,7 @@
 	}
 	
 	
-	function InsertPartnerWebsiteLayout($_POST)
+	function InsertPartnerWebsiteLayout()
 	{
 		$query = mysql_query('INSERT INTO partners_layout (id_partner,color_header, color_background, color_lines, top_left,top_right, bottom_left, bottom_right) 
 							  VALUES ("'.mysql_prep($_POST['partner_id']).'","'.mysql_prep($_POST['color_header']).'","'.mysql_prep($_POST['color_background']).'",
@@ -310,7 +310,7 @@
 			return	0;
 	}
 	
-	function EditPartnerWebsiteLayout($_POST)
+	function EditPartnerWebsiteLayout()
 	{
 		$query = mysql_query(
 		'UPDATE partners_layout SET 	

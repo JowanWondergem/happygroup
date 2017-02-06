@@ -38,7 +38,7 @@
 		
 	}
 	
-	function InsertContact($_POST)
+	function InsertContact()
 	{
 		$query = mysql_query('INSERT INTO contact (active,name, place, address, zip_code, telephone, fax, email) 
 							  VALUES ("'.mysql_prep($_POST['active']).'","'.mysql_prep($_POST['name']).'","'.mysql_prep($_POST['place']).'","'.mysql_prep($_POST['address']).'",
@@ -51,7 +51,7 @@
 	}
 	
 	
-	function UpdateContact($_POST)
+	function UpdateContact()
 	{
 		$query = mysql_query(
 		'UPDATE contact SET 	

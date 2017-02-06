@@ -28,7 +28,7 @@
 		
 	}
 	
-	function InsertSliderInfo($_POST)
+	function InsertSliderInfo()
 	{
 		$query = mysql_query('INSERT INTO slider(active) VALUES("'.mysql_prep($_POST['active']).'")'
 		) or die('Error insert slider info'.mysql_error());
@@ -40,7 +40,7 @@
 		
 	}
 	
-	function InsertSliderInfoLan($_POST, $id_slider)
+	function InsertSliderInfoLan($id_slider)
 	{
 		$query = mysql_query('INSERT INTO slider_lan(id_lan,id_slider,title, subtitle) VALUES("'.mysql_prep($_POST['id_lan']).'",
 							"'.$id_slider.'","'.mysql_prep($_POST['title']).'","'.mysql_prep($_POST['subtitle']).'")'
@@ -53,7 +53,7 @@
 		
 	}
 	
-	function UpdateSliderInfo($_POST)
+	function UpdateSliderInfo()
 	{
 		$query = mysql_query(
 		'UPDATE slider SET 	active = "'.mysql_prep($_POST['active']).'"
@@ -69,7 +69,7 @@
 	}
 	
 	
-	function UpdateSliderInfoLan($_POST)
+	function UpdateSliderInfoLan()
 	{
 		$query = mysql_query(
 		'UPDATE slider_lan SET 	
@@ -109,7 +109,7 @@
 	
 	
 	
-	function deleteSlider($_POST)
+	function deleteSlider()
 	{
 		$query = mysql_query("DELETE FROM slider WHERE id=".$_POST['id']) or die(mysql_error());
 		$query2 = mysql_query("DELETE FROM slider_lan WHERE id_slider=".$_POST['id']) or die(mysql_error());	
