@@ -35,6 +35,7 @@
 	$l_menu_register = 'REGISTRAR';
 	$l_menu_flyers = 'FLYERS';
 	$l_menu_contacts = 'CONTATOS';
+	$l_menu_german_partners = 'PARCEIROS ALEMANHA';
 	
 	// FOOTER
 	
