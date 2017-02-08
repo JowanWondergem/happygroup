@@ -419,6 +419,7 @@
 							
 							
 								$('#area').html(data);
+								$('#area').prepend('<option value="0" selected disabled>Select Area</option>');
 							 }
 							 
 							 
@@ -449,6 +450,7 @@
 							  success: function(data) 
 							  {
 								$('#city').html(data);
+								$('#city').prepend('<option value="0" selected disabled>Select City</option>');
 							 }
 							 
 							 
